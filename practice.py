@@ -1,69 +1,69 @@
 
 # pylint:프로그래밍상에서 잘못된 부분을 미리 알려주는거
 
-#자료형
-# print(5)
-# print('풍선')
-# print("ㅋ"*9)
-# print(not 5>10)
+자료형
+print(5)
+print('풍선')
+print("ㅋ"*9)
+print(not 5>10)
 
-#변수
-# animal="강아지"
-# name="토리"
-# age=4
-# is_adult=age>=3
-# print("우리집" + animal + "는 " + name + "에요")
-# # print( str(age) + "살 이구요, 어른일까요? " + str(is_adult))
-# print( age, "살 이구요, 어른일까요? ", is_adult)
-# #,엔 빈칸이 생긴다
+변수
+animal="강아지"
+name="토리"
+age=4
+is_adult=age>=3
+print("우리집" + animal + "는 " + name + "에요")
+# print( str(age) + "살 이구요, 어른일까요? " + str(is_adult))
+print( age, "살 이구요, 어른일까요? ", is_adult)
+#,엔 빈칸이 생긴다
 
-# station="사당"
-# print(station,"행 열차가 들어오고 있습니다.")
-# File > Preferences > terminal font로 설정
-# print(1+1)
-# print(2**3) #2의 3승
-# print(5%2) #나머지
-# print(5//3) #몫
+station="사당"
+print(station,"행 열차가 들어오고 있습니다.")
+File > Preferences > terminal font로 설정
+print(1+1)
+print(2**3) #2의 3승
+print(5%2) #나머지
+print(5//3) #몫
 
-# print(4<=6)
-# print(3==3)
-# print(3+4==7)
-# print(1!=3)
+print(4<=6)
+print(3==3)
+print(3+4==7)
+print(1!=3)
 
-# print((3>0) and (3<5)) # &
-# print((3>0) or (5<3)) # ||
+print((3>0) and (3<5)) # &
+print((3>0) or (5<3)) # ||
 
-# number = 10
-# print(number)
-# number+=2
-# print(number)
-# number-=2
-# print(number)
-# number*=2
-# print(number)
-# number/=2
-# print(number) # 10.0 이 됨
+number = 10
+print(number)
+number+=2
+print(number)
+number-=2
+print(number)
+number*=2
+print(number)
+number/=2
+print(number) # 10.0 이 됨
 
-# abs(-5)
-# pow(4,2)
-# max(5,12)
-# min(1,3)
-# round(3.14)
-# round(3.74)
+abs(-5)
+pow(4,2)
+max(5,12)
+min(1,3)
+round(3.14)
+round(3.74)
 
-# from math import *  #math안의 모든걸 import하겠다.
+from math import *  #math안의 모든걸 import하겠다.
 
-# print(floor(4.99)) #내림
-# print(ceil(4.99)) #올림
-# print(sqrt(4)) #제곱근 2.0
+print(floor(4.99)) #내림
+print(ceil(4.99)) #올림
+print(sqrt(4)) #제곱근 2.0
 
-# from random import *
+from random import *
 
-# print( random() )
-# print( int(43*random()) ) #0~43미만의 값
-# print(randrange(1,43)) #0~43미만의 값 == randint(0,42)
+print( random() )
+print( int(43*random()) ) #0~43미만의 값
+print(randrange(1,43)) #0~43미만의 값 == randint(0,42)
 
-# date=int(25*random())+4
+date=int(25*random())+4
 
 sentence = '나는 소년'
 print(sentence)
@@ -132,144 +132,144 @@ print("RedApple\bPine") # \b : 백스페이스  한 글자 삭제 \t는 탭
 #리스트 []
 
 # 지하철 칸별로 10명, 20명, 30명
-# subway1 = 10
-# subway2 = 20
-# subway3 = 30
+subway1 = 10
+subway2 = 20
+subway3 = 30
 
-# subway = [10, 20, 30]
-# print(subway) # [10,20,30]
-# subway=["나", "너", "우리"]
-# print( subway.index("우리") )
+subway = [10, 20, 30]
+print(subway) # [10,20,30]
+subway=["나", "너", "우리"]
+print( subway.index("우리") )
 
-# # split도 있다!!!
+# split도 있다!!!
 
-# # 하하씨가 다음 정류장에서 다음 칸에 탐
-# subway.append("하하") #append는 맨뒤에 하나 추가.
-# subway.insert(1, "정형돈") #정형돈을 1번째 위치에 추가.
+# 하하씨가 다음 정류장에서 다음 칸에 탐
+subway.append("하하") #append는 맨뒤에 하나 추가.
+subway.insert(1, "정형돈") #정형돈을 1번째 위치에 추가.
 
-# wholeave = subway.pop() #제일 뒤에 있는게 빠짐. 빠진사람이 할당
+wholeave = subway.pop() #제일 뒤에 있는게 빠짐. 빠진사람이 할당
 
-# subway.append("나")
-# print(subway.count("나")) # 2
-# #정렬도 가능
-# num_list=[5,2,4,3,1]
-# num_list.sort() # 1,2,3,4,5로 정렬.
-# num_list.reverse() #5,4,3,2,1로 바뀜.
-# # num_list.clear()  다 지워짐ㅠㅠ
-# mix_list=["조세호", 20, True] # 자료형에 관계없이 가능
+subway.append("나")
+print(subway.count("나")) # 2
+#정렬도 가능
+num_list=[5,2,4,3,1]
+num_list.sort() # 1,2,3,4,5로 정렬.
+num_list.reverse() #5,4,3,2,1로 바뀜.
+# num_list.clear()  다 지워짐ㅠㅠ
+mix_list=["조세호", 20, True] # 자료형에 관계없이 가능
 
-# #리스트 확장
-# num_list.extend(mix_list) # 리스트 두개가 합쳐진다
+#리스트 확장
+num_list.extend(mix_list) # 리스트 두개가 합쳐진다
 
-# #사전 만들기!
-# cabinet = { 3:"유재석", 100:"김태호" }  # key, 콜론, value
-# print(cabinet[3]) #유재석이 출력.
-# print( cabinet.get(3) ) #위랑 같다.
-# # print(cabinet[5]) # KeyError[5]라는 오류 출력 후 바로 프로그램 종료.
-# print( cabinet.get(5) ) #None 이 출력. 종료 안됨.
-# print( cabinet.get(5, "사용가능") ) #사용가능 이 출력.
+#사전 만들기!
+cabinet = { 3:"유재석", 100:"김태호" }  # key, 콜론, value
+print(cabinet[3]) #유재석이 출력.
+print( cabinet.get(3) ) #위랑 같다.
+# print(cabinet[5]) # KeyError[5]라는 오류 출력 후 바로 프로그램 종료.
+print( cabinet.get(5) ) #None 이 출력. 종료 안됨.
+print( cabinet.get(5, "사용가능") ) #사용가능 이 출력.
 
-# print(3 in cabinet) # True
-# print(6 in cabinet) # Flase
+print(3 in cabinet) # True
+print(6 in cabinet) # Flase
 
-# mycabinet = {"A-3":"내꺼", "B-100":"니꺼"}
-# mycabinet["C-20"] = "조세호" #끝에 C-20이라는 Key를 만들고 조세호를 넣는다. C-20이 이미 있으면 값이 업데이트.
+mycabinet = {"A-3":"내꺼", "B-100":"니꺼"}
+mycabinet["C-20"] = "조세호" #끝에 C-20이라는 Key를 만들고 조세호를 넣는다. C-20이 이미 있으면 값이 업데이트.
 
-# # 간 손님
-# del mycabinet["A-3"] #A-3키를 삭제
-# print(mycabinet.keys()) #키들만 출력
-# print(mycabinet.values()) #값들만 출력
-# print(mycabinet.items()) #쌍으로 출력. clear로 다 없애기
+# 간 손님
+del mycabinet["A-3"] #A-3키를 삭제
+print(mycabinet.keys()) #키들만 출력
+print(mycabinet.values()) #값들만 출력
+print(mycabinet.items()) #쌍으로 출력. clear로 다 없애기
 
-# #튜플 list와는 다르게 내용 변경이나 추가를 할 수 없지만 속도가 list보다 빠르다.
-# menu=("돈까스", "치즈까스")
-# print(menu[0])
-# print(menu[1])
+#튜플 list와는 다르게 내용 변경이나 추가를 할 수 없지만 속도가 list보다 빠르다.
+menu=("돈까스", "치즈까스")
+print(menu[0])
+print(menu[1])
 
-# # menu.add("생선까스") #튜플은 추가가 불가능
-# # name = "김종국"
-# # age = 20
-# # hobby = "코딩"
+# menu.add("생선까스") #튜플은 추가가 불가능
+# name = "김종국"
+# age = 20
+# hobby = "코딩"
 
-# ( name, age, hobby ) = ("김종국", 20, "코딩")
-# print(name,age,hobby) 
+( name, age, hobby ) = ("김종국", 20, "코딩")
+print(name,age,hobby) 
 
-# #집합 set, 중복안됨, 순서 없음
-# my_set = {1,2,3,3,3}
-# print(my_set) # {1,2,3}
+#집합 set, 중복안됨, 순서 없음
+my_set = {1,2,3,3,3}
+print(my_set) # {1,2,3}
 
-# java = {"유재", "조세", "박명"}
-# python = set(["유재", "박명"])
-# # 교집합
-# print( java & python) # 유재
-# print( java.intersection(python)) # 유재
+java = {"유재", "조세", "박명"}
+python = set(["유재", "박명"])
+# 교집합
+print( java & python) # 유재
+print( java.intersection(python)) # 유재
 
-# # 합집합
-# print(java | python)
-# print(java.union(python))
+# 합집합
+print(java | python)
+print(java.union(python))
 
-# # 차집합 java는 가능, python은 불가능
-# print(java - python)
-# print(java.difference(python)) #조세, 박명
-# java.remove("박명")
+# 차집합 java는 가능, python은 불가능
+print(java - python)
+print(java.difference(python)) #조세, 박명
+java.remove("박명")
 
-# #자료구조의 변경
-# menu = {"커피", "우유", "주스"}
-# print(menu, type(menu)) #{커피, 우유, 주스} , <class 'set'>
+#자료구조의 변경
+menu = {"커피", "우유", "주스"}
+print(menu, type(menu)) #{커피, 우유, 주스} , <class 'set'>
 
-# menu = list(menu) #list로 바뀜 []
-# menu = tuple(menu) #tuple로 바뀜 ()
+menu = list(menu) #list로 바뀜 []
+menu = tuple(menu) #tuple로 바뀜 ()
 
-# weather = "비"
+weather = "비"
 
-# if weather == "비" or weather == "눈": #or
-#     print("우산을 챙기세요")
-# elif weather == "미세먼지":
-#     print("마스크 챙겨")
-# else:
-#     print("it's good")
+if weather == "비" or weather == "눈": #or
+    print("우산을 챙기세요")
+elif weather == "미세먼지":
+    print("마스크 챙겨")
+else:
+    print("it's good")
 
-# weather = input("오늘 날씨는?") #입력을 기다린다.
+weather = input("오늘 날씨는?") #입력을 기다린다.
 
-# temp = int(input("기온은 어때요?")) #input은 문자열으로 받기 때문에 받아서 int로 바로 저장
-# #str 입력하면 ValueError 발생
-# if 30<=temp:
-#     print("don't go out")
-# elif 10 <= temp and temp <30 : # and
-#     print("It's so so")
-# elif 0 <= temp < 10: # and
-#     print(" little cold ")
-# else:
-#     print("춥당")
+temp = int(input("기온은 어때요?")) #input은 문자열으로 받기 때문에 받아서 int로 바로 저장
+#str 입력하면 ValueError 발생
+if 30<=temp:
+    print("don't go out")
+elif 10 <= temp and temp <30 : # and
+    print("It's so so")
+elif 0 <= temp < 10: # and
+    print(" little cold ")
+else:
+    print("춥당")
 
-# #for 반복문
-# print("대기번호 : 1")
+#for 반복문
+print("대기번호 : 1")
 
-# for waiting_num in [0,1,2,3,4] : 
-#     print("대기번호 : {0}".format(waiting_num)) #0, 1,2,3,4 순서대로 들어감
+for waiting_num in [0,1,2,3,4] : 
+    print("대기번호 : {0}".format(waiting_num)) #0, 1,2,3,4 순서대로 들어감
 
-# for waiting_num in range(1, 5) : # 1에서부터 5미만까지 
-#     print("대기번호 : {0}".format(waiting_num)) #1,2,3,4 순서대로 들어감
+for waiting_num in range(1, 5) : # 1에서부터 5미만까지 
+    print("대기번호 : {0}".format(waiting_num)) #1,2,3,4 순서대로 들어감
 
-# starbucks = ["재석", "박명", "조세"]
-# for customer in starbucks:
-#     print("{0}, 커피 준비됨".format(customer))
+starbucks = ["재석", "박명", "조세"]
+for customer in starbucks:
+    print("{0}, 커피 준비됨".format(customer))
 
-# # while 반복문
-# customer = "토르"
-# index = 5
-# while index >= 1 :
-#     print("{0}, 커피 준비됨. {1}번안에 와라".format(customer, index))
-#     index -= 1
-#     if index==0:
-#         print("커피 버렸어요")
+# while 반복문
+customer = "토르"
+index = 5
+while index >= 1 :
+    print("{0}, 커피 준비됨. {1}번안에 와라".format(customer, index))
+    index -= 1
+    if index==0:
+        print("커피 버렸어요")
 
-# customer = "토르"
-# person = "Unknown"
+customer = "토르"
+person = "Unknown"
 
-# while person != customer:
-#     print("{0}, 커피 준비됨.".format(customer))
-#     person = input("이름이 어떻게 되세요? ") # 토르면 종료됨
+while person != customer:
+    print("{0}, 커피 준비됨.".format(customer))
+    person = input("이름이 어떻게 되세요? ") # 토르면 종료됨
 
 absent = [2,5]
 book = [4]
@@ -292,37 +292,37 @@ students = ["abcd", "abc", "abcdefgh"]
 upperstudent = [e.upper() for e in students]
 students = [len(i) for i in students]
 
-# from random import *
-# cnt = 0 # 총 탑승객 수
-# for i in range(1,5): 
-#     time = randrange(5,51) # 5~50분 사이 소요 시간
-#     if 5 <= time <= 15 :
-#         print("[o] {0}번째 손님 ( 소요시간 : {1}분 )".format(i,time))
-#         cnt += 1
-#     else : 
-#         print("[x] {0}번째 손님 ( 소요시간 : {1}분 )".format(i,time))
+from random import *
+cnt = 0 # 총 탑승객 수
+for i in range(1,5): 
+    time = randrange(5,51) # 5~50분 사이 소요 시간
+    if 5 <= time <= 15 :
+        print("[o] {0}번째 손님 ( 소요시간 : {1}분 )".format(i,time))
+        cnt += 1
+    else : 
+        print("[x] {0}번째 손님 ( 소요시간 : {1}분 )".format(i,time))
 
-# print(f"총 승객수 : {cnt}")
+print(f"총 승객수 : {cnt}")
 
-# # 함수 
-# def open_account():
-#     print("새로운 계좌가 생성되었습니다.")
+# 함수 
+def open_account():
+    print("새로운 계좌가 생성되었습니다.")
 
-# open_account()
+open_account()
 
-# def deposit(balance:int, money:str) -> int:   #str이 money에 들어가도 에러는 발생하지 않는다.
-#     print(f"입금이 완료 되었습니다. 원래 잔액은 {balance}원 입니다.")
-#     return balance + money, balance
+def deposit(balance:int, money:str) -> int:   #str이 money에 들어가도 에러는 발생하지 않는다.
+    print(f"입금이 완료 되었습니다. 원래 잔액은 {balance}원 입니다.")
+    return balance + money, balance
 
-# balance = deposit(1000, 100)
-# print(balance)
-# balance, originalmoney = deposit(500,100) # return값을 2개해도 이렇게 구동이 된다.
+balance = deposit(1000, 100)
+print(balance)
+balance, originalmoney = deposit(500,100) # return값을 2개해도 이렇게 구동이 된다.
 
-# def profile( name, age=17, lang="Python" ): # default arguement설정.
-#     print("이름 : {0}\t나이 : {1}\t주 사용 언어 : {2}" \
-#         .format(name,age,lang))  #역슬래쉬로 줄바꿔서 이어가기
+def profile( name, age=17, lang="Python" ): # default arguement설정.
+    print("이름 : {0}\t나이 : {1}\t주 사용 언어 : {2}" \
+        .format(name,age,lang))  #역슬래쉬로 줄바꿔서 이어가기
 
-# profile("김호진") # non-default가 default뒤에 오면 안된다.
+profile("김호진") # non-default가 default뒤에 오면 안된다.
 
 def profile(name, age, lang) : 
     print(name, age, lang)
@@ -365,18 +365,18 @@ gun = checkpoint_ret(gun, 2)
 #
 #
 
-# def std_weight(ki: int, gender: str):
-#     if gender == "male":
-#         print(round(ki*ki*22,2))
-#     elif gender == "female":
-#         print(round(ki*ki*21,2)) #소수점 둘째자리 까지만 표시해줘! -> 셋째자리에서 반올림
-#     else:
-#         print("올바른 성별을 입력해 주세요")
+def std_weight(ki: int, gender: str):
+    if gender == "male":
+        print(round(ki*ki*22,2))
+    elif gender == "female":
+        print(round(ki*ki*21,2)) #소수점 둘째자리 까지만 표시해줘! -> 셋째자리에서 반올림
+    else:
+        print("올바른 성별을 입력해 주세요")
 
-# ki = int(input("키를 입력해주세요"))
-# gender = input("성별")
+ki = int(input("키를 입력해주세요"))
+gender = input("성별")
 
-# std_weight(ki/100, gender)
+std_weight(ki/100, gender)
 
 import sys
 print("Python", "Java", "Javascirpt",sep=",", end="?") 
@@ -420,79 +420,79 @@ score_file.write("과학 : 80")
 score_file.write("\n코딩 : 80")
 score_file.close()
 
-# score_file = open("score.txt", "r", encoding="utf8") # utf8이 한글을 잘 다룸
-# print(score_file.read()) 
-# score_file.close()
+score_file = open("score.txt", "r", encoding="utf8") # utf8이 한글을 잘 다룸
+print(score_file.read()) 
+score_file.close()
 
-# score_file.open("score.txt", "r", encoding="utf8")
-# print(score_file.readline()) #줄별로 읽기, 한줄 읽고 커서는 다음 줄로 이동
-# print(score_file.readline()) # 4번하면 다 읽는데 몇줄인지 모른다면?
-# score_file.close()
+score_file.open("score.txt", "r", encoding="utf8")
+print(score_file.readline()) #줄별로 읽기, 한줄 읽고 커서는 다음 줄로 이동
+print(score_file.readline()) # 4번하면 다 읽는데 몇줄인지 모른다면?
+score_file.close()
 
-# score_file = open("score.txt", "r", encoding="utf8")
-# while True:
-#     line = score_file.readline()
-#     if not line:
-#         break
-#     print(line, end="")
-# score_file.close()
+score_file = open("score.txt", "r", encoding="utf8")
+while True:
+    line = score_file.readline()
+    if not line:
+        break
+    print(line, end="")
+score_file.close()
 
-# score_file = open("score.txt", "r", encoding="utf8")
-# lines = score_file.readlines() # list 형태로 저장
-# print(lines) #['수학 : 0\n', '영어 : 10\n', '과학 : 80\n', '코딩 : 80']로 저장된다
-# score_file.close()
+score_file = open("score.txt", "r", encoding="utf8")
+lines = score_file.readlines() # list 형태로 저장
+print(lines) #['수학 : 0\n', '영어 : 10\n', '과학 : 80\n', '코딩 : 80']로 저장된다
+score_file.close()
 
-# #피클! 프로그램상에서 사용하고 있는 데이터를 파일로 저장해주는것
-# import pickle
-# profile_file = open("profile.pickle", "wb") # b는 binary를 의미
-# profile = {"이름":"박명수", "나이":"30", "취미":["축구", "골프"]}
-# print(profile)
-# pickle.dump(profile, profile_file) # profile에 있는 정보를 profile_file에 저장한다.
-# profile_file.close() #저장한걸 열어보면 binary라서 읽을 수 없다고 뜬다.
+#피클! 프로그램상에서 사용하고 있는 데이터를 파일로 저장해주는것
+import pickle
+profile_file = open("profile.pickle", "wb") # b는 binary를 의미
+profile = {"이름":"박명수", "나이":"30", "취미":["축구", "골프"]}
+print(profile)
+pickle.dump(profile, profile_file) # profile에 있는 정보를 profile_file에 저장한다.
+profile_file.close() #저장한걸 열어보면 binary라서 읽을 수 없다고 뜬다.
 
-# profile_file = open("profile.pickle", "rb") # b는 binary를 의미
-# profile = pickle.load(profile_file) # file에 있는 정보를 profile에 불러오기
-# print(profile)
-# profile_file.close()
+profile_file = open("profile.pickle", "rb") # b는 binary를 의미
+profile = pickle.load(profile_file) # file에 있는 정보를 profile에 불러오기
+print(profile)
+profile_file.close()
 
-# #with! with를 쓰면 파일을 엵고 닫는게 편리하다
+#with! with를 쓰면 파일을 엵고 닫는게 편리하다
 
-# with open("profile.pickle", "rb") as profile_file:
-#     print(pickle.load(profile_file))
-#     #with문을 탈출하면서 자동으로 종료
+with open("profile.pickle", "rb") as profile_file:
+    print(pickle.load(profile_file))
+    #with문을 탈출하면서 자동으로 종료
 
-# with open("study.txt", "w", encoding="utf8") as study_file:
-#     study_file.write("파이썬 공부 중")
+with open("study.txt", "w", encoding="utf8") as study_file:
+    study_file.write("파이썬 공부 중")
 
-# for i in range(1,5):
-#     #report = open(f"{i}주차.txt", "w", encoding="utf8")
-#     #report.write(str(i) + "주차 보고서 입니다.")
-#     with open(str(i)+ "주차.txt", "w", encoding="utf8") as report_file:
-#         report_file.write(" - {0} 주차 주간보고 - \n".format(i))
-#         report_file.write("끝입니다.")
-#     report_file.close()
+for i in range(1,5):
+    #report = open(f"{i}주차.txt", "w", encoding="utf8")
+    #report.write(str(i) + "주차 보고서 입니다.")
+    with open(str(i)+ "주차.txt", "w", encoding="utf8") as report_file:
+        report_file.write(" - {0} 주차 주간보고 - \n".format(i))
+        report_file.write("끝입니다.")
+    report_file.close()
 
-# report_file = open("4주차.txt", "r", encoding="utf8")
-# print(report_file.readline())
-# report_file.close()
+report_file = open("4주차.txt", "r", encoding="utf8")
+print(report_file.readline())
+report_file.close()
   
-# Class 파트 입니다!
+Class 파트 입니다!
 
-# 마린
+마린
 
-# name = "마린"
-# hp = 40
-# damage = 5
+name = "마린"
+hp = 40
+damage = 5
 
-# print(f"{name} 유닛이 생성되었습니다.")
-# print(f"체력은 {hp}, 공격력은 {damage}")
+print(f"{name} 유닛이 생성되었습니다.")
+print(f"체력은 {hp}, 공격력은 {damage}")
 
-# tank_name = "탱크"
-# tank_hp = 40
-# tank_damage = 5
+tank_name = "탱크"
+tank_hp = 40
+tank_damage = 5
 
-# print(f"{tank_name} 유닛이 생성되었습니다.")
-# print(f"체력은 {tank_hp}, 공격력은 {tank_damage}")
+print(f"{tank_name} 유닛이 생성되었습니다.")
+print(f"체력은 {tank_hp}, 공격력은 {tank_damage}")
 
 def attack(name, location, damage):
     print(f"{name} : {location} 방향으로 공격합니다. [공격력 {damage}]")
