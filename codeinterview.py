@@ -129,9 +129,31 @@ class Solution:
 
 import collections
 
-dict_ = collections.OrderedDict()
-dict_["wed"] = 1
-dict_["sec"] = 3
-dict_["dw"] = 2
+class Solution:
+    def mostCommonWord(self, paragraph: str, banned: list[str]) -> str:
+        words = [word for word in re.sub(r'[^\w]', ' ', paragraph)
+                 .lower().split() 
+                    if word not in banned]
+                # 안띄우면 스페이스도 없애버리는구나
+        # 이러면 words 에는 banned를 제외한 단어들만 저장된다.
+        counts = collections.Counter(words)
+        return counts.most_common(1)[0][0]
 
-print(dict_)
+# leetcode 의 가장 빠른 방법
+import re
+
+class Solution:
+    def mostCommonWord(self, paragraph: str, banned: list[str]) -> str:
+		
+		# convert to lower case and split string into words by spaces and punctuation
+        a = re.split(r'\W+', paragraph.lower())
+		
+		# make new list consisitng of words not in banned list (remove banned words)
+        b = [w for w in a if w not in banned]
+		
+		# return value that counted max times in the new list
+        return max(b, key = b.count)
+
+word = "54321"
+print(word)
+print(sorted(word))
