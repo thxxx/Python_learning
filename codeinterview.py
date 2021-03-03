@@ -154,6 +154,21 @@ class Solution:
 		# return value that counted max times in the new list
         return max(b, key = b.count)
 
-word = "54321"
-print(word)
-print(sorted(word))
+# 그룹 애너그램
+
+class Solution:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        anagrams = collections.defaultdict(list)
+        for word in strs :
+            result = ''.join(sorted(word)) # sorted 를 쓰면 요소를 다 분리해서 정렬된 list로 만든다. 
+            # 이걸 다시 join으로 합쳐주면 같은 아나그램 단어들은 같은 key의 value가 된다.
+            anagrams[result].append(word) #append로 하나의 key에 여러 value가 할당될 수 있도록한다.
+        return anagrams.values()
+        
+
+# 가장 긴 팰린드롬 부분 문자열
+
+s = ["21","132","2323"]
+
+print(max(s, key=len) )
+
