@@ -172,3 +172,60 @@ s = ["21","132","2323"]
 
 print(max(s, key=len) )
 
+class Solution:
+    def oddEvenList(self, head: listNode) -> listNode:
+        odd = head
+        even_head = even = head.next
+        while even and even.next:
+            odd.next = odd.next.next
+            odd = odd.next
+            even.next = even.next.next
+            even = even.next
+
+        odd.next = even_head
+        return head
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseBetween(self, head: ListNode, left: int, right: int) -> ListNode:
+        if not head.next or not head or left == right :
+            return head
+        root = start = ListNode(None)
+        root.next = head
+        
+        # start, end 부터 일단 지정 for은 0에서 시작하는거 제발 기억하자
+        for i in range(left - 1):
+            start = start.next
+        end = start.next
+
+        
+        for i in range(right - left):
+            prev, start.next = start.next, end.next
+            end.next.next, end.next = prev, end.next.next
+
+        return root.next
+
+        class Node:
+	def __init__(self, item, next):
+		self.item = item
+        self.next = next
+
+class Stack:
+    def __init__(self):
+        self.last = None # 마지막노드. 가장 최근에 들어온 노드를 가리킨다.
+    
+    def push(self, item):
+        self.last = Node(item, self.last) # 새롭게 부여된 self.last의 next가 이전 self.last가 된다.
+
+    def pop(self):
+        item = self.last.item
+        self.last = self.last.next
+        return item # 없어진 노드의 값을 반환
+
+
+        
