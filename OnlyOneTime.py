@@ -1,22 +1,33 @@
-# import random
 
-# TRIAL = 100000
-# same = 0
-# for _ in range(TRIAL):
-#     birthdays = []
-#     for i in range(23):
-#         birthday = random.randint(1,365)
-#         if birthday in birthdays:
-#             same += 1
-#             break
-#         birthdays.append(birthday)
+graph = {
+    1: [2,3,4],
+    2: [5],
+    3: [5],
+    4: [],
+    5: [6,7],
+    6: [],
+    7: [3],
+}
 
-# print(f"{(same/TRIAL * 100)} %")
+def dfs(v, discovered=[]):
+    discovered.append(v)
+    for w in graph[v]:
+        if w not in discovered:
+            discovered = dfs(w, discovered)
+    return discovered
 
-stones = "aaWSDfadswef"
-jewels = "ws"
-print(sum(map(stones.count, jewels)))
+print(dfs(1))
 
-def numJewelsInStones(self, jewels: str, stones: str) -> int:
-    return sum([s in jewels for s in stones])
-        
+def dfs_s(start_v):
+    discovered = []
+    stack = [start_v]
+    while stack :
+        v = stack.pop()
+        if v not in discovered:
+            discovered.append(v)
+            for w in graph[v]:
+                stack.append(w)
+
+    return discovered
+
+print(dfs_s(1))

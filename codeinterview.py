@@ -228,4 +228,36 @@ class Stack:
         return item # 없어진 노드의 값을 반환
 
 
-        
+import heapq
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class Solution:
+    def mergeKLists(lists: list[ListNode]) -> ListNode:
+        root = result = ListNode(None) # 이건 루트와 리절트를 각각 따로 하는것과는 다르다. root 는 result가 된다.
+        heap = []
+
+        #각 연결리스트의 루트를 힙에 저장
+        """
+        for li in lists:
+            heapq.heappush(heap, (li.val, li))
+        """
+        # 근데 이렇게 하면 같은 값을 가지고 있는게 있을때 heappop에서 뭘 뽑을지 에러가 난다. 따라서 그 다음의 우선순위를 지정해주기
+        for i in range(len(lists)):
+            if lists[i]:
+                heapq.heappush(heap, (lists[i].val, i, lists[i]))
+    
+        while heap:
+            pop = heapq.heappop(heap)
+            result.next = pop[2]
+            index = pop[1]
+
+            heapq.heappush(heap, (result.next.val, index, result.next))
+
+        return root.next
+
