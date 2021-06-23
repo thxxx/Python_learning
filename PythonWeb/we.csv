@@ -1,0 +1,10 @@
+name, last_name, age, gender
+hojin, Kim, 24, male
+hojin, Kim, 24, male
+hojin, Kim, 24, male
+eunbi, GO, 24, female
+
+
+ctrl + shift + v 가 프리뷰열기.
+seperator type(구분기호)을 comma로 지정해야한다.
+

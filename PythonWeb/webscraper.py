@@ -16,7 +16,7 @@ import requests
 # print(type(days_tu))
 
 # #dict key와 value를 가짐
-# hojin = {    
+# hojin = {
 # "name" : "Hojin",
 # "age" : 29,
 # "korean" : True,
@@ -29,7 +29,7 @@ import requests
 # #built-in function
 # def say_hello(who, a = 0): #arguement를 하나만 전달하면 default로 0을 줘라
 #     # print(f"Hello {who}! {a} times ")
-#     return f"{who} Hi {a}" 
+#     return f"{who} Hi {a}"
 
 # say_hello("go")
 # name = say_hello("go")
@@ -52,9 +52,9 @@ import requests
 
 # 두번째 파트. 웹 프로젝트 Web scraping
 # url로 부터 사진과 제목을 가져온다.
-# url로 접근 -> 페이지가 몇개인지 알아낸다. -> 하나씩 들어간다. 
+# url로 접근 -> 페이지가 몇개인지 알아낸다. -> 하나씩 들어간다.
 
-#request 설치 by pip install requests
+# request 설치 by pip install requests
 
 # indeed_result = requests.get("https://kr.indeed.com/jobs?q=Python&l=")
 
@@ -76,7 +76,7 @@ import requests
 # for page in pages[:-1]:
 #     #page_list.append(page.find("span").string) #드디어 가져왔다 #string은 안의 텍스트만 추출
 #     page_list.append(int(page.string)) #bs4가 자동으로 찾아준다.
-    
+
 # #print(page_list[0:-1]) # 마지막꺼 빼고 출력.
 # print(page_list)
 # """페이지 수 : page_list[-1]
@@ -84,25 +84,26 @@ import requests
 # max_page = page_list[-1]
 
 from indeed import extract_indeed_pages, extract_indeed_jobs
+from stoflow import *
+from save import save_to_file
 
-#페이지를 계속해서 request하는법. 페이지 갯수만큼 해줘야하지?
+# 페이지를 계속해서 request하는법. 페이지 갯수만큼 해줘야하지?
 
-last_indeed_pages = extract_indeed_pages()
 
-extract_indeed_jobs(last_indeed_pages)
-#이제 request를 만들 수 있다.
-"""
-&start=0
-&start=10
-&start=20
-&start=30
-&start=40 이걸 가지고.
-"""
+def get_indeed_jobs():
+    last_indeed_pages = extract_indeed_pages()
+    jobs = extract_indeed_jobs(2)
+    return jobs
 
+indeed_jobs = get_indeed_jobs()
+so_jobs = get_so_jobs()
+
+all_jobs = so_jobs + indeed_jobs
+
+print(all_jobs)
+
+# 이제 이 all_jobs를 excel sheet에 넣는다
+
+# save_to_file(all_jobs)  # all_jobs
 
 # 세번째 파트. django web framework 사용하기 위해 알면 좋은 것들
-
-
-
-
-

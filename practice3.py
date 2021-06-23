@@ -1,20 +1,70 @@
-# import theater_module
-# theater_module.price(3) #3명이서 영화보러 갔을 때 가격
+import os
+import requests
+from bs4 import BeautifulSoup
+from babel.numbers import format_currency
 
-# theater_module.price_morning(4)
-# theater_module.price_army(2)
+os.system("clear")
 
-# #모듈은 그냥 파이썬 파일.
-# import theater_module as mv #별명을 붙여서 mv로 사용.
-# mv.price_army(2)
+url = "https://www.iban.com/currency-codes"
 
-# from theater_module import *
-# # 모듈안의 class 나 함수를 그냥 바로 사용하겠다.
+countries = []
 
-#원하는 것만 임포트 가능.
-from theater_module import price, price_morning
+request = requests.get(url)
+soup = BeautifulSoup(request.text, "html.parser")
 
-#원하는 걸 줄여서 별명으로 사용
-from theater_module import price_army as price
-price(3)
+table = soup.find("table")
+rows = table.find_all("tr")[1:]
 
+for row in rows :
+    items = row.find_all("td")
+    name = items[0].text
+    code =items[2].text
+    if name and code:
+        if name != "No universal currency":
+            country = {
+                'name':name.capitalize(),
+                'code':code,
+            }
+        countries.append(country)
+
+
+def ask() -> str:
+  try:
+    num = int(input("#: "))
+    if num > len(countries):
+      print("Choose a number from the list.")
+      ask()
+    else:
+      country = countries[num]
+      result = country['code']
+      print(result)
+  except ValueError:
+    print("That wasn't a number.")
+    ask()
+
+def ask_amount(first:str, second:str):
+  try:
+    money = input(f"How many {first} do you want to convert to {second}? \n")
+  except ValueError:
+    print("That wasn't a numbet")
+    ask_amount()
+
+  print(money)
+
+print("Where are you from? Choose a country by number")
+for index, country in enumerate(countries):
+  print(f"#{index} {country['name']}")
+
+ask()
+print("Now choose another country.")
+ask()
+
+#ask_amount(first_country,second_country)
+
+
+"""
+Use the 'format_currency' function to format the output of the conversion
+format_currency(AMOUNT, CURRENCY_CODE, locale="ko_KR" (no need to change this one))
+"""
+
+print(format_currency(5000, "KRW", locale="ko_KR"))
