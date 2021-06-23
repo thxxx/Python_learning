@@ -11,7 +11,6 @@ b = a
 c = a[:]
 a[0] = 30
 print(b)
-print(c)
 
 print(counter)
 for fr, ba in enumerate(counter):
